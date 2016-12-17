@@ -1,0 +1,1 @@
+json.array! @points_records, partial: 'points_records/points_record', as: :points_record

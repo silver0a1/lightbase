@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @points_record.user_id %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @points_record.value %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @points_record.created_at %>
+</p>
+
+<%= link_to 'Edit', edit_points_record_path(@points_record) %> |
+<%= link_to 'Back', points_records_path %>

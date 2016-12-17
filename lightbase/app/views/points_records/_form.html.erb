@@ -1,0 +1,32 @@
+<%= form_for(points_record) do |f| %>
+  <% if points_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(points_record.errors.count, "error") %> prohibited this points_record from being saved:</h2>
+
+      <ul>
+      <% points_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :value %>
+    <%= f.number_field :value %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.datetime_select :created_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

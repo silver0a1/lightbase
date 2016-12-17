@@ -1,0 +1,2 @@
+module PointsRecordsHelper
+end

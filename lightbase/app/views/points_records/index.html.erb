@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Points Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Value</th>
+      <th>Created at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @points_records.each do |points_record| %>
+      <tr>
+        <td><%= points_record.user_id %></td>
+        <td><%= points_record.value %></td>
+        <td><%= points_record.created_at %></td>
+        <td><%= link_to 'Show', points_record %></td>
+        <td><%= link_to 'Edit', edit_points_record_path(points_record) %></td>
+        <td><%= link_to 'Destroy', points_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Points Record', new_points_record_path %>

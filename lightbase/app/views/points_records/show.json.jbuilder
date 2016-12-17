@@ -1,0 +1,1 @@
+json.partial! "points_records/points_record", points_record: @points_record
